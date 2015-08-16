@@ -1,0 +1,38 @@
+<div class = "container">
+<%= simple_form_for(@user) do |f| %>
+
+<%= render 'shared/error_message' %>
+
+<div class="row">
+<div class="col-xs-8">
+		<%= f.label :Question %>
+		<%= f.text_field :title %>
+	</div><br>
+</div>
+
+<div class="row">
+	<div class="col-xs-8">
+		<br>
+		<%= f.label :Answer %>
+		<%= f.text_area :description %>
+	</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <%= f.association :category, include_blank: false %>
+  </div>
+</div>
+
+	<div class="row">
+	<div class="col-xs-8">
+  <div class="form-actions">
+    <%= f.button :submit, "post",	 class: "btn btn-success" %>
+  </div>
+</div>
+</div>
+  <br />
+
+</div>
+</div>
+
+<% end %>

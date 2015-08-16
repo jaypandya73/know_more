@@ -1,0 +1,25 @@
+<div class = "container">
+<%= simple_form_for(@category) do |f| %>
+
+
+
+<div class="row">
+<div class="col-xs-8">
+		<%= f.label :Category %>
+		<%= f.text_field :name %>
+	</div><br>
+</div>
+
+	<div class="row">
+	<div class="col-xs-8">
+  <div class="form-actions">
+    <%= f.button :submit, "post",	 class: "btn btn-success" %>
+  </div>
+</div>
+</div>
+  <br />
+
+</div>
+</div>
+
+<% end %>

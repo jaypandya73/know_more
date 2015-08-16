@@ -1,0 +1,7 @@
+<h2>List of categories.</h2>
+Category: <%= @category.name %>
+<br>
+
+<%= render @category.users %>
+
+<%= link_to 'delete', @category, method: :delete, data: { confirm: "You sure?" } %>
